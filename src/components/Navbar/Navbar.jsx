@@ -18,13 +18,10 @@ const Navbar = ({ totalItems }) => {
 							<img
 								src={logo}
 								alt='Commerce.js'
-								height='60px'
+								height='75px'
 								className={classes.image}
 							/>
 						</Link>
-						<Typography variant='h6' className={classes.title}>
-							For all your Cat Supply Needs
-						</Typography>
 					</Typography>
 					<div className={classes.grow} />
 					{location.pathname === "/" && (
