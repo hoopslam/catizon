@@ -11,7 +11,9 @@ const Cart = ({ cart, handleUpdateCartQuantity, handleRemoveFromCart, handleEmpt
 	const EmptyCart = () => (
 		<Typography variant='subtitle1'>
 			Your cart is empty,
-			<Link to='/' className={classes.link}>start adding items now!</Link>
+			<Link to='/' className={classes.link}>
+				start adding items now!
+			</Link>
 		</Typography>
 	);
 
@@ -20,7 +22,11 @@ const Cart = ({ cart, handleUpdateCartQuantity, handleRemoveFromCart, handleEmpt
 			<Grid container spacing={3}>
 				{cart.line_items.map((item) => (
 					<Grid item xs={12} sm={4} key={item.id}>
-						<CartItem item={item} handleUpdateCartQuantity={handleUpdateCartQuantity} handleRemoveFromCart={handleRemoveFromCart}/>
+						<CartItem
+							item={item}
+							handleUpdateCartQuantity={handleUpdateCartQuantity}
+							handleRemoveFromCart={handleRemoveFromCart}
+						/>
 					</Grid>
 				))}
 			</Grid>
@@ -29,18 +35,28 @@ const Cart = ({ cart, handleUpdateCartQuantity, handleRemoveFromCart, handleEmpt
 					Subtotal: {cart.subtotal.formatted_with_symbol}
 				</Typography>
 				<div>
+					<Link to='/' className={classes.link}>
+						<Button
+							className={classes.emptyButton}
+							size='large'
+							type='button'
+							variant='contained'
+							color='primary'>
+							Add More Items
+						</Button>
+					</Link>
 					<Button
 						className={classes.emptyButton}
 						size='large'
 						type='button'
 						variant='contained'
 						color='secondary'
-                        onClick={handleEmptyCart}>
+						onClick={handleEmptyCart}>
 						Empty Cart
 					</Button>
 					<Button
 						component={Link}
-						to="/checkout"
+						to='/checkout'
 						className={classes.checkoutButton}
 						size='large'
 						type='button'

@@ -7,15 +7,15 @@ const images = [
 	{
 		id: 1,
 		title: "Stylish Scratchers",
-		description: "Mutli-functional scratchers for scratching and more!!!",
+		description: "Mutli-functional scratchers for scratching and more!",
 		src: "'/assets/hero1.jpg'",
+		right: true,
 	},
 	{
 		id: 2,
 		title: "Rug Escape",
 		description: "Find the puuurfect rugs to take cover under!",
 		src: "'/assets/hero2.jpg'",
-		dark: true,
 	},
 	{
 		id: 3,
@@ -36,8 +36,8 @@ const HeroCarousel = () => {
 						style={{
 							backgroundImage: `url(${image.src})`,
 						}}>
-						{image.dark ? (
-							<div className='item-text-container' style={{ color: "white" }}>
+						{image.right ? (
+							<div className='item-text-container' style={{ left: "unset", right: "75px" }}>
 								<Typography variant="h4">{image.title}</Typography>
 								<Typography>{image.description}</Typography>
 							</div>

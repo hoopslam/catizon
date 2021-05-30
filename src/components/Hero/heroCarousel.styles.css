@@ -17,11 +17,15 @@
 
 .item-text-container {
     position: absolute;
-    color: rgb(41, 41, 41);
-    top: 20%;
+    color: white;
+    bottom: 10%;
     left: 75px;
+    max-width: 300px;
+    background-color:rgba(46, 46, 46, 0.404);
+    border-radius: 5px;
+    padding: 5px;
 }
 
-.item-text-container h2, p {
-    padding: 0 20px;
+.item-text-container h4, p {
+    padding: 5px;
 }
